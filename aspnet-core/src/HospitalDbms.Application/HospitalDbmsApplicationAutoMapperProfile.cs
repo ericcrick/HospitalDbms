@@ -7,6 +7,7 @@ public class HospitalDbmsApplicationAutoMapperProfile : Profile
 {
     public HospitalDbmsApplicationAutoMapperProfile()
     {
-        CreateMap<Department,CreateDepartmentDto>();
+        CreateMap<Department,DepartmentDto>();
+        CreateMap<CreateUpdateDepartmentDto,Department>();
     }
 }

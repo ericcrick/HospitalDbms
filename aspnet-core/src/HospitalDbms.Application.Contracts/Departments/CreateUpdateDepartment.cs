@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace HospitalDbms.Departments;
 
-public class UpdateDepartmentDto{
+public class CreateUpdateDepartmentDto{
   [Required]
   [StringLength(128)]
   public string DepartmentName { get; set; }

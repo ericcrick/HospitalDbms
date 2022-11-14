@@ -1,9 +1,10 @@
 using System;
-using Volo.Abp.Application.Dtos;
+using Volo.Abp.Domain.Entities.Auditing;
 
-namespace HospitalDbms.Departments;
+namespace HospitalDbms.Departments.Model ;
 
-public class DepartmentDto: AuditedEntityDto<Guid>{
+public class Department: AuditedAggregateRoot<Guid>{
+
   public string DepartmentName { get; set; }
   public string DepartmentHead { get; set; }
   public string DepartmentTelephone { get; set;}

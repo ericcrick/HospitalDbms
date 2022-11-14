@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace HospitalDbms.Departments;
+namespace HospitalDbms.Departments.Dto;
 
 public class CreateUpdateDepartmentDto{
   [Required]

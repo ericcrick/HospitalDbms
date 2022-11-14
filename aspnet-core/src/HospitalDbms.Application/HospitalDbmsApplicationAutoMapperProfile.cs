@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using HospitalDbms.Departments;
 
 namespace HospitalDbms;
 
@@ -6,8 +7,6 @@ public class HospitalDbmsApplicationAutoMapperProfile : Profile
 {
     public HospitalDbmsApplicationAutoMapperProfile()
     {
-        /* You can configure your AutoMapper mapping configuration here.
-         * Alternatively, you can split your mapping configurations
-         * into multiple profile classes for a better organization. */
+        CreateMap<Department,CreateDepartmentDto>();
     }
 }

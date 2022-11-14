@@ -1,10 +1,8 @@
-using System;
 using System.ComponentModel.DataAnnotations;
-using Volo.Abp.Application.Dtos;
 
 namespace HospitalDbms.Departments;
 
-public class CreateDepartmentDto: AuditedEntityDto<Guid>{
+public class UpdateDepartmentDto{
   [Required]
   [StringLength(128)]
   public string DepartmentName { get; set; }

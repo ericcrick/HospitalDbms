@@ -1,1 +1,33 @@
-<p>department works!</p>
+<div class="card">
+  <div class="card-header">
+    <div class="row">
+      <div class="col col-md-6">
+        <h5 class="card-title">
+          Department
+        </h5>
+      </div>
+      <div class="text-end col col-md-6"></div>
+    </div>
+  </div>
+  <div class="card-body">
+    <ngx-datatable [rows]="department.items" [count]="department.totalCount" [list]="list" default>
+      <ngx-datatable-column [name]="'::Department Name' | abpLocalization" prop="departmentName"></ngx-datatable-column>
+      <ngx-datatable-column [name]="'::OIC/NOIC' | abpLocalization" prop="departmentHead"></ngx-datatable-column>
+      <ngx-datatable-column [name]="'::Telephone Line' | abpLocalization" prop="departmentTelephone">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{ row.departmentTelephone}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column [name]="'::Department Email' | abpLocalization" prop="departmentMail">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{ row.departmentMail}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column [name]="'::Date Created' | abpLocalization" prop="creationTime">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{row.creationTime | date}}
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
+</div>

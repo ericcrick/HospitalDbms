@@ -16,24 +16,38 @@ function configureRoutes(routesService: RoutesService) {
         layout: eLayoutType.application,
       },
       {
-        path: '/employees',
+        path: '/employee',
         name: "Employees",
         iconClass: 'fa fa-user',
         order: 2,
         layout: eLayoutType.application
       },
       {
-        path: '/departments',
-        name: "Department",
+        path: '/department',
+        name: "Departments",
         iconClass: 'fa fa-university',
         order: 3,
+        layout: eLayoutType.application
+      },
+      {
+        path: '/promotion',
+        name: "Promotions",
+        iconClass: 'fa fa-briefcase',
+        order: 4,
+        layout: eLayoutType.application
+      },
+      {
+        path: '/leave',
+        name: "Leave",
+        iconClass: 'fa fa-calendar',
+        order: 5,
         layout: eLayoutType.application
       },
       {
         path: '/welfare',
         name: "Welfare",
         iconClass: 'fa fa-balance-scale',
-        order: 4,
+        order: 6,
         layout: eLayoutType.application
       },
     ]);

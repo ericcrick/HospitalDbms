@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using HospitalDbms.Departments.Dto;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
@@ -10,5 +11,8 @@ ICrudAppService<
 DepartmentDto, 
 Guid, 
 PagedAndSortedResultRequestDto, 
-CreateUpdateDepartmentDto>
-{}
+CreateUpdateDepartmentDto>,
+IApplicationService
+{
+  public Task<long> GetDepartmentRecordCount(); 
+}

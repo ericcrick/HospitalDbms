@@ -35,6 +35,14 @@ export class DepartmentService {
     { apiName: this.apiName });
   
 
+  getDepartmentRecordCount = () =>
+    this.restService.request<any, number>({
+      method: 'GET',
+      url: '/api/app/department/department-record-count',
+    },
+    { apiName: this.apiName });
+  
+
   getList = (input: PagedAndSortedResultRequestDto) =>
     this.restService.request<any, PagedResultDto<DepartmentDto>>({
       method: 'GET',

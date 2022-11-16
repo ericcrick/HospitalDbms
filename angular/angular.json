@@ -96,6 +96,7 @@
                 "bundleName": "abp-bundle.rtl"
               },
               "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "src/styles.css",
               "src/styles.scss"
             ],
             "scripts": []

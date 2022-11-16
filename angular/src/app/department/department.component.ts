@@ -15,6 +15,8 @@ export class DepartmentComponent implements OnInit {
   department = { items: [], totalCount: 0 } as PagedResultDto<DepartmentDto>
   isModalOpen = false;
   form: FormGroup
+  searchDepartment = {} as DepartmentDto;
+  searchKey: string = ""
 
   selectedDepartment = {} as DepartmentDto;
 
@@ -31,6 +33,7 @@ export class DepartmentComponent implements OnInit {
     this.list.hookToQuery(departmentStreamCreator).subscribe((response) => {
       this.department = response;
     });
+    // this.onSearchDepartment(this.searchKey);
   }
 
   createDepartment() {
@@ -76,6 +79,9 @@ export class DepartmentComponent implements OnInit {
         this.departmentService.delete(id).subscribe(() => this.list.get());
       }
     });
+  }
+  onSearchDepartment(searchKeyWord: string){
+    console.log(searchKeyWord);
   }
 
 }

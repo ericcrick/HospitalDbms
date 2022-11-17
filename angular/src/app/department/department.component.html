@@ -6,12 +6,17 @@
           Department
         </h5>
       </div>
-      <div class="text-end col col-md-6">
-        <div class="text-lg-end pt-2">
-          <input [(ngModel)]="searchKey" (ngModelChange)="onSearchDepartment($event)" class="tw-px-3 tw-font-light tw-text-gray-500 tw-mr-3 tw-rounded-lg tw-outline-none tw-border tw-border-blue-300 tw-py-1" type="text" placeholder="Search here">
-          <button id="create" class="btn btn-primary" type="button" (click)="createDepartment()">
-            <i class="fa fa-plus mr-1"></i>
-            <span class="px-2">{{ "::Create New Department" | abpLocalization }}</span>
+      <div class="">
+        <div class="text-lg-end tw-pt-2 tw-pb-2 md:tw-flex tw-justify-between tw-gap-2">
+          <div class="tw-mb-3 tw-flex">
+          <input [(ngModel)]="searchKey" (ngModelChange)="onSearchDepartment($event)" 
+          class="form-control tw-mr-[2px] tw-w-[400px]" type="text"
+          placeholder="Search department">
+          <span class="fa fa-search tw-bg-gray-300 tw-px-4 tw-py-4 tw-rounded-lg hover:tw-bg-gray-200 hover:tw-cursor-pointer"></span>
+          </div>
+          <button id="create" class="btn btn-primary tw-h-12" type="button" (click)="createDepartment()">
+            <i class="fa fa-plus"></i>
+            <span class="text-lg-end tw-px-2">{{ "::Add Department" | abpLocalization }}</span>
           </button>
         </div>
       </div>
@@ -49,7 +54,7 @@
               aria-haspopup="true"
               ngbDropdownToggle
             >
-              <i class="fa fa-cog mr-1"></i>{{ '::Actions' | abpLocalization }}
+              <i class="fa fa-cog mr-1 tw-px-2"></i>{{ '::Actions' | abpLocalization }}
             </button>
             <div ngbDropdownMenu>
               <button ngbDropdownItem (click)="editDepartment(row.id)">
